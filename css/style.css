@@ -44,3 +44,66 @@ header {
   border-radius: 4px;
   transition: 0.3s linear;
 }
+
+.navi-menu i {
+  margin-right: 8px;
+  font-size: 24px;
+}
+
+.home {
+  color: rgb(249, 181, 6);
+}
+
+.navi-menu a:hover {
+  background: #273b91;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.menu-toggle-btn {
+  float: right;
+  height: 90px;
+  line-height: 90px !important;
+  color: rgb(210, 17, 17);
+  font-size: 26px;
+  display: none !important;
+  cursor: pointer;
+}
+
+/* here's the responsive bit for the navi bar*/
+@media screen and (max-width: 900px) {
+  .menu-toggle-btn {
+    display: block !important;
+  }
+
+  .navi-menu {
+    position: fixed;
+    width: 100%;
+    max-width: 400px;
+    background: #172b4d;
+    top: 90px;
+    right: 0;
+    display: none;
+    padding: 20px 40px;
+    box-sizing: border-box;
+  }
+
+  .navi-menu::before {
+    content: "";
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #172b4d;
+    position: absolute;
+    top: -10px;
+    right: 10px;
+  }
+
+  .navi-menu a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .navi-menu.active {
+    display: block;
+  }
+}
